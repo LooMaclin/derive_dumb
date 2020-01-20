@@ -6,6 +6,7 @@ edition = "2018"
 description = "Derive `Dumb` generates a structure in which all fields are public. Original structure can be converted using function call `dumb`."
 repository = "https://github.com/loomaclin/derive_dumb"
 documentation = "https://docs.serde.rs/derive_dumb/"
+readme = "README.md"
 license = "MIT/Apache-2.0"
 
 [dependencies]
