@@ -1,0 +1,12 @@
+[package]
+name = "dumb_gen"
+version = "0.1.0"
+authors = ["loomaclin <loo.maclin@protonmail.com>"]
+edition = "2018"
+
+[dependencies]
+syn = "1"
+quote = "1"
+
+[lib]
+proc-macro = true
