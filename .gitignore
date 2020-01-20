@@ -1,2 +1,4 @@
 /target
 **/*.rs.bk
+.idea
+test_derive_dumb_gen/target
