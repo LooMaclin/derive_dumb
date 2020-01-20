@@ -35,7 +35,7 @@ fn impl_hello_macro(ast: &syn::DeriveInput) -> TokenStream {
     let res = quote! {
         #dumb_ast
         impl #name {
-            fn dumb(self) -> #dumb_name {
+            pub fn dumb(self) -> #dumb_name {
                 #dumb_name {
                     #(#field_name: self.#field_name),*
                 }

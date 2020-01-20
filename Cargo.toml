@@ -1,6 +1,6 @@
 [package]
 name = "derive_dumb"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["loomaclin <loo.maclin@protonmail.com>"]
 edition = "2018"
 description = "Derive `Dumb` generates a structure in which all fields are public. Original structure can be converted using function call `dumb`."
