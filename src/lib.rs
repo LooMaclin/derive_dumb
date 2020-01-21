@@ -28,6 +28,7 @@ fn impl_hello_macro(ast: &syn::DeriveInput) -> TokenStream {
         Data::Struct(ref mut data_struct) => {
             for field in &mut data_struct.fields {
                 field.vis = Visibility::Public(VisPublic { pub_token: syn::token::Pub::default() });
+                field.attrs = Vec::new();
             }
         }
         _ => panic!("only struct supported"),

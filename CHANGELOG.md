@@ -1,3 +1,7 @@
+## 0.1.4
+
+- remove original fields attributes from dumb AST
+
 ## 0.1.3
 
 - remove original structure attributes from dumb AST
