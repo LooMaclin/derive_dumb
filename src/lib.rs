@@ -32,6 +32,7 @@ fn impl_hello_macro(ast: &syn::DeriveInput) -> TokenStream {
         }
         _ => panic!("only struct supported"),
     };
+    dumb_ast.attrs = Vec::new();
     let res = quote! {
         #dumb_ast
         impl #name {
