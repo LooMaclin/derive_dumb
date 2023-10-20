@@ -1,36 +1,32 @@
-use dumb_gen::Dumb;
+use derive_dumb::Dumb;
 
 #[derive(Dumb, Debug)]
-pub struct A {
+pub struct A<'a, T> {
     a: String,
     b: u8,
-    c: u16,
+    c: &'a T,
 }
 
-impl A {
-
-    pub fn new() -> Self {
+impl<'a, T> A<'a, T> {
+    pub fn new(c: &'a T) -> Self {
         Self {
             a: "abc".to_string(),
             b: 0,
-            c: 1,
+            c,
         }
     }
 }
 
 #[cfg(test)]
 mod tests {
-
-    use super::{A, DumbA};
+    use super::{DumbA, A};
 
     #[test]
     fn it_works() {
-        let a = A::new();
-        let DumbA {
-            a, b, c
-        } = a.dumb();
+        let a = A::new(&1);
+        let DumbA { a, b, c } = a.dumb();
         assert_eq!(a, "abc".to_string());
         assert_eq!(b, 0);
-        assert_eq!(c, 1);
+        assert_eq!(c, &1);
     }
 }
